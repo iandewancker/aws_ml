@@ -1,16 +1,19 @@
 #!/bin/bash
 sudo apt-get update && sudo apt-get -yq upgrade
-sudo apt-get install python-dev
+sudo apt-get install -y python-dev
 sudo apt-get install -y libopencv-dev python-opencv libhdf5-dev
 sudo apt-get install -yq linux-image-extra-`uname -r`
-sudo apt-get -y install git
-sudo apt-get install libblas-dev liblapack-dev libatlas-base-dev gfortran
-sudo apt-get install python-pip
+sudo apt-get install -y git
+sudo apt-get install -y libblas-dev liblapack-dev libatlas-base-dev gfortran
+sudo apt-get install -y python-pip
+sudo apt-get install -y ipython
 
 sudo pip install -q --upgrade pip
 sudo pip install -U numpy
 sudo pip install -U scipy
 sudo pip install scikit-learn==0.17 
+sudo pip install pymc
+sudo pip install xgboost
 sudo pip install joblib 
 sudo pip install sigopt 
 sudo pip install pystache
@@ -26,7 +29,8 @@ sudo pip install scikit-cuda==0.5.1
 sudo pip install pytools
 sudo pip install scikit-image
 sudo pip install autograd
-sudo apt-get install libjpeg-dev zlib1g-dev
+sudo pip install pandas
+sudo apt-get install -y libjpeg-dev zlib1g-dev
 
 wget http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb
 sudo dpkg -i cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb
