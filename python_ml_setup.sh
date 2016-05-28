@@ -13,6 +13,7 @@ sudo pip install -q --upgrade pip
 sudo pip install -U numpy
 sudo pip install -U scipy
 sudo pip install scikit-learn==0.17 
+sudo pip install gensim
 sudo pip install pymc
 sudo pip install xgboost
 sudo pip install joblib 
